@@ -16,7 +16,7 @@ export function formatPatientData (patient, output) {
     name: patient.name.first + ' ' + patient.name.last,
     mrn: patient.mrn,
     dob: patient.dob,
-    demographics: age(patient.dob) + ' y.o ' + patient.sex,
+    demographics: age(patient.dob) + ' y.o. ' + patient.sex,
     treatment_site: patient.treatment_site,
     histology: patient.histology,
     tumor_size: patient.tumor_size_cm,

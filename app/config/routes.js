@@ -5,7 +5,8 @@ import { MainContainer, HomeContainer } from 'containers'
 export default function routes (checkAuth, history) {
   return (
     <Router history={hashHistory}>
-      <Route path='/' component={HomeContainer}>
+      <Route path='/' component={MainContainer}>
+        <IndexRoute component={HomeContainer} />
       </Route>
     </Router>
   )

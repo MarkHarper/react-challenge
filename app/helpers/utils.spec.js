@@ -20,7 +20,7 @@ const processedExample = [{
   'name': 'Harry Carroll',
   'mrn': '56789',
   'dob': '06/12/1964',
-  'demographics': '52 y.o Male',
+  'demographics': '52 y.o. Male',
   'treatment_site': 'Prostate',
   'tumor_size': 0.5,
   'histology': 'Carcinoma',

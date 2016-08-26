@@ -36,7 +36,7 @@ const base = {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
       {test: /\.css$/, loader: 'style!css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]'},
-      {test: /\.csv$/, loader: 'dsv-loader'},
+      { test: /\.json$/, loader: 'json' },
     ],
   },
   resolve: {

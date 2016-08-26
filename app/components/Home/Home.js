@@ -1,9 +1,10 @@
 import React from 'react'
+import {TableContainer} from 'containers'
 
 const Home = () => {
   return (
     <div>
-      {'Hello'}
+      <TableContainer />
     </div>
   )
 }
