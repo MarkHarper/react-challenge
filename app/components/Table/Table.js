@@ -3,9 +3,9 @@ import {RowContainer} from 'containers'
 
 const Table = ({data}) => {
   let rows = []
-  data.forEach(function (patient, i, arr) {
-    rows.push(<RowContainer data={patient} key={i} reactKey={i}/>)
-  })
+  for (var i in data) {
+    rows.push(<RowContainer data={data[i]} key={i} reactKey={i}/>)
+  }
   return (
     <table>
       <thead>

@@ -9,7 +9,7 @@ class RowContainer extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
   handleClick (e) {
-    this.props.dispatch(push('/patient'))
+    this.props.dispatch(push('/patient/' + this.props.data.key.replace(/ /g, '_')))
   }
   render () {
     return (

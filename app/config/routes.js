@@ -6,7 +6,7 @@ export default function routes (history) {
   return (
     <Router history={history}>
       <Route path='/' component={MainContainer}>
-        <Route path='/patient' component={PatientContainer} />
+        <Route path='/patient/:name' component={PatientContainer} />
         <IndexRoute component={HomeContainer} />
       </Route>
     </Router>

@@ -1,25 +1,22 @@
 import React, {PropTypes} from 'react'
-import {deliverPatientData} from 'helpers/utils'
-import data from '../../data/patients.json'
 import {Weight} from 'components'
 
-const Patient = () => {
-  const cleanData = deliverPatientData(data)[0]
+const Patient = (patient) => {
   return (
     <div>
-       <span>{cleanData.name}</span>
+       <span>{patient.data.name}</span>
        <ul>
-        <span>{'MRN: ' + cleanData.mrn + ' '}</span>
-        <span>{cleanData.dob}</span>
-        <span>{cleanData.demographics}</span>
+        <span>{'MRN: ' + patient.data.mrn + ' '}</span>
+        <span>{patient.data.dob}</span>
+        <span>{patient.data.demographics}</span>
        </ul>
        <ul>
-        <span>{cleanData.tumor_size + ' cm '}</span>
-        <span>{cleanData.histology + ', '}</span>
-        <span>{cleanData.treatment_site}</span>
+        <span>{patient.data.tumor_size + ' cm '}</span>
+        <span>{patient.data.histology + ', '}</span>
+        <span>{patient.data.treatment_site}</span>
        </ul>
        <ul>
-        <span>{cleanData.weight + ' lb'}</span>
+        <span>{patient.data.weight + ' lb'}</span>
         <Weight />
        </ul>
     </div>
@@ -27,7 +24,7 @@ const Patient = () => {
 }
 
 Patient.proptypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
 }
 
 export default Patient
