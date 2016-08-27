@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react'
 import {RowContainer} from 'containers'
+import {table} from './styles.css'
 
 const Table = ({data}) => {
   let rows = []
@@ -7,7 +8,7 @@ const Table = ({data}) => {
     rows.push(<RowContainer data={data[i]} key={i} reactKey={i}/>)
   }
   return (
-    <table>
+    <table className={table}>
       <thead>
         <RowContainer isHeader={true}/>
       </thead>

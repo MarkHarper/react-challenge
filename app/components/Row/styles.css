@@ -1,4 +1,14 @@
-.row:hover {
-  background-color: #777;
+.rowContainer:hover {
+  background-color: #9AC0DA;
+  color: white;
   cursor: pointer;
+}
+
+.row {
+  padding: 1em;
+}
+
+.header {
+  composes: row;
+  border-bottom: 2px solid #9AC0DA;
 }

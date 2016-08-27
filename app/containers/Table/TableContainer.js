@@ -18,9 +18,7 @@ class TableContainer extends Component {
   }
   render () {
     return (
-      <div>
-        <Table data={this.checkData()} />
-      </div>
+      <Table data={this.checkData()} />
     )
   }
 }
