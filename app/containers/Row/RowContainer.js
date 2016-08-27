@@ -4,13 +4,14 @@ import {Row} from 'components'
 class RowContainer extends Component {
   render () {
     return (
-      <Row data={this.props.data}/>
+      <Row data={this.props.data} isHeader={this.props.isHeader} />
     )
   }
 }
 
 RowContainer.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
+  isHeader: PropTypes.bool,
 }
 
 export default RowContainer

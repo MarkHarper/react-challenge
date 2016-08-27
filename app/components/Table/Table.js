@@ -8,6 +8,7 @@ const Table = ({data}) => {
   })
   return (
     <table>
+      <RowContainer isHeader={true}/>
       <tbody>
         {rows}
       </tbody>
