@@ -1,12 +1,12 @@
 import React from 'react'
-import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute } from 'react-router'
 import { MainContainer, HomeContainer, PatientContainer } from 'containers'
 
-export default function routes (checkAuth, history) {
+export default function routes (history) {
   return (
-    <Router history={hashHistory}>
+    <Router history={history}>
       <Route path='/' component={MainContainer}>
-        <Route path='/patient' component={PatientContainer}></Route>
+        <Route path='/patient' component={PatientContainer} />
         <IndexRoute component={HomeContainer} />
       </Route>
     </Router>

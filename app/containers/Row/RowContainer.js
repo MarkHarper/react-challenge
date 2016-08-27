@@ -1,13 +1,15 @@
 import React, {Component, PropTypes} from 'react'
 import {Row} from 'components'
+import { connect } from 'react-redux'
+import { push } from 'react-router-redux'
 
 class RowContainer extends Component {
   constructor (props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
   }
-  handleClick () {
-    console.log(this)
+  handleClick (e) {
+    this.props.dispatch(push('/patient'))
   }
   render () {
     return (
@@ -21,4 +23,4 @@ RowContainer.propTypes = {
   isHeader: PropTypes.bool,
 }
 
-export default RowContainer
+export default connect()(RowContainer)
