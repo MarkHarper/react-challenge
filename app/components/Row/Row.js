@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react'
+import {row} from './styles.css'
 
-const Row = ({data, isHeader}) => {
+const Row = ({data, isHeader, handleClick}) => {
   return isHeader === true
     ? <tr>
           <th>{'Name'}</th>
@@ -12,7 +13,7 @@ const Row = ({data, isHeader}) => {
           <th>{'Treatment Site'}</th>
           <th>{'Tumor Size'}</th>
       </tr>
-      : <tr>
+      : <tr className={row} onClick={handleClick}>
           <td>{data.name}</td>
           <td>{data.mrn}</td>
           <td>{data.dob}</td>
@@ -27,6 +28,7 @@ const Row = ({data, isHeader}) => {
 Row.propTypes = {
   data: PropTypes.object,
   isHeader: PropTypes.bool,
+  handleClick: PropTypes.func,
 }
 
 export default Row

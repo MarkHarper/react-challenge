@@ -1,3 +1,5 @@
 export Home from './Home/Home.js'
 export Table from './Table/Table.js'
 export Row from './Row/Row.js'
+export Patient from './Patient/Patient.js'
+export Weight from './D3/Weight/Weight.js'
