@@ -5,7 +5,7 @@ import {container, name, left, between} from './styles.css'
 const Patient = (props) => {
   return (
     <div className={container}>
-       <li className={name}>{props.data.name}</li>
+       <span className={name}>{props.data.name}</span>
        <ul className={between}>
         <li>{'MRN: ' + props.data.mrn + ' '}</li>
         <li>{props.data.dob}</li>

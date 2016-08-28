@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import { findDOMNode } from 'react-dom'
 import * as d3 from 'd3'
 
 class Circle extends Component {

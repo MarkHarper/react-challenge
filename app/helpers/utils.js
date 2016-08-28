@@ -1,6 +1,4 @@
-import json from '../data/patients.json'
-
-export function deliverPatientData () {
+export function deliverPatientData (json) {
   let output = {}
   return traverse(json, output, formatPatientData)
 }

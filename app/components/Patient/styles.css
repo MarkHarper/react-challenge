@@ -1,4 +1,10 @@
+.card {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 0 1.5em;
+}
+
 .container {
+  composes: card;
   width: 25em;
   margin: 0 auto;
   display: block;
@@ -11,7 +17,7 @@
   text-align: center;
   margin: 0 auto;
   display: block;
-  padding-bottom: 0.5em;
+  padding: 1em 0 0.5em;
 }
 
 .list {

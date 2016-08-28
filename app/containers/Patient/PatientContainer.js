@@ -2,13 +2,14 @@ import React, {Component, PropTypes} from 'react'
 import {Patient} from 'components'
 import { connect } from 'react-redux'
 import { deliverPatientData } from 'helpers/utils'
+import json from '../../data/patients.json'
 import * as dataActions from 'redux/modules/data'
 import {bindActionCreators} from 'redux'
 import * as d3 from 'd3'
 
 class PatientContainer extends Component {
   checkData () {
-    let newData = deliverPatientData()
+    let newData = deliverPatientData(json)
     let weightArr = []
     for (var i in newData) {
       weightArr.push(newData[i].weight)

@@ -16,8 +16,9 @@ const examplePatientArr = [{
   'weight': 212.2,
 }]
 
-const processedExample = [{
+const processedExample = { 'Harry_Carroll0': {
   'name': 'Harry Carroll',
+  'key': 'Harry_Carroll0',
   'mrn': '56789',
   'dob': '06/12/1964',
   'demographics': '52 y.o. Male',
@@ -25,7 +26,7 @@ const processedExample = [{
   'tumor_size': 0.5,
   'histology': 'Carcinoma',
   'weight': 212.2,
-}]
+}}
 
 describe('age', () => {
   it('should calculate the correct age, given a date string', () => {
@@ -43,7 +44,7 @@ describe('formatPatientData', () => {
     let case1 = examplePatientArr[0]
     let answer1 = processedExample
 
-    expect(formatPatientData(case1, [])).toEqual(answer1)
+    expect(formatPatientData(case1, {}, 0)).toEqual(answer1)
   })
 })
 
@@ -52,6 +53,6 @@ describe('deliverPatientData', () => {
     let case1 = examplePatientArr
     let answer1 = processedExample
 
-    expect(deliverPatientData(case1, [])).toEqual(answer1)
+    expect(deliverPatientData(case1, {})).toEqual(answer1)
   })
 })

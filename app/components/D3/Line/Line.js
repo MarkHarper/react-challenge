@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import { findDOMNode } from 'react-dom'
 import * as d3 from 'd3'
 
 class Line extends Component {
@@ -8,7 +7,7 @@ class Line extends Component {
     this.enter = this.enter.bind(this)
   }
   componentDidMount () {
-    d3.select(findDOMNode(this))
+    d3.select('.' + this.props.class)
       .datum(this.props)
       .call(this.enter)
   }
