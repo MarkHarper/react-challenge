@@ -1,30 +1,35 @@
 import React, {PropTypes} from 'react'
 import {Weight} from 'components'
+import {container, name, left, between} from './styles.css'
 
-const Patient = (patient) => {
+const Patient = (props) => {
   return (
-    <div>
-       <span>{patient.data.name}</span>
-       <ul>
-        <span>{'MRN: ' + patient.data.mrn + ' '}</span>
-        <span>{patient.data.dob}</span>
-        <span>{patient.data.demographics}</span>
+    <div className={container}>
+       <li className={name}>{props.data.name}</li>
+       <ul className={between}>
+        <li>{'MRN: ' + props.data.mrn + ' '}</li>
+        <li>{props.data.dob}</li>
+        <li>{props.data.demographics}</li>
        </ul>
-       <ul>
-        <span>{patient.data.tumor_size + ' cm '}</span>
-        <span>{patient.data.histology + ', '}</span>
-        <span>{patient.data.treatment_site}</span>
+       <ul className={left}>
+        <li>{props.data.tumor_size + ' cm '}</li>
+        <li>{props.data.histology + ', '}</li>
+        <li>{props.data.treatment_site}</li>
        </ul>
-       <ul>
-        <span>{patient.data.weight + ' lb'}</span>
-        <Weight />
+       <ul className={between}>
+        <li>{props.data.weight + ' lb'}</li>
+        <Weight min={props.min} mean={props.mean} max={props.max}
+          patientWeight={props.data.weight}/>
        </ul>
     </div>
   )
 }
 
 Patient.proptypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.number.isRequired,
+  min: PropTypes.number.isRequired,
+  mean: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
 }
 
 export default Patient

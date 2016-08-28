@@ -1,0 +1,41 @@
+.container {
+  width: 25em;
+  margin: 0 auto;
+  display: block;
+  transform: translateY(50%);
+}
+
+.name {
+  font-size: 2em;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+.list {
+  width: 100%;
+  margin: 0;
+  padding: 2em 0;
+  display: flex;
+  font-size: 1.1em;
+}
+
+.list li{
+  list-style: none;
+}
+
+.between {
+  composes: list;
+  justify-content: space-between;
+}
+
+.left {
+  composes: list;
+  justify-content: flex-start;
+}
+
+.left li {
+  padding-right: 0.5em;
+}
