@@ -1,3 +1,16 @@
+## Run instructions
+
+- clone the repository
+
+Development:
+- npm start
+
+Generate a production build:
+- npm run production
+
+Run Tests:
+- npm run test
+
 ## React Challenge
 
 A little challenge to demonstrate your React skills.
